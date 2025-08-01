@@ -280,7 +280,7 @@ def main(env_config):
                 firebase_handler.update_config(env_config["project"])
  
                 try:
-                    # pull .py files from git gggggggg
+                    # pull .py files from git
                     subprocess.run(["git", "pull", "origin", "main"], check=True)
                     print("✅ Code updated to latest main branch.")
                 except subprocess.CalledProcessError as e:
