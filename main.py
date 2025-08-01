@@ -285,9 +285,9 @@ def main(env_config):
                     subprocess.run(["git", "reset", "--hard"], check=True)
                     subprocess.run(["git", "clean", "-fd"], check=True)  # remove untracked files (like .pyc)
                    
-                    subprocess.run(["git", "checkout", "v2"], check=True)
-                    subprocess.run(["git", "pull", "origin", "v2"], check=True)
-                    print("✅ Code updated to latest v2 branch.")
+                    subprocess.run(["git", "checkout", "main"], check=True)
+                    subprocess.run(["git", "pull", "origin", "main"], check=True)
+                    print("✅ Code updated to latest main branch.")
                 except subprocess.CalledProcessError as e:
                     print(f"⚠ Git update failed: {e}")
                     logging.error("Git update failed:\n%s", traceback.format_exc())
