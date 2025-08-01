@@ -280,9 +280,9 @@ def main(env_config):
                 firebase_handler.update_config(env_config["project"])
  
                 try:
-                    subprocess.run(["git", "fetch", "origin"], check=True)
+                    #subprocess.run(["git", "fetch", "origin"], check=True)
                     # Discard any local changes
-                    subprocess.run(["git", "reset", "--hard"], check=True)
+                    #subprocess.run(["git", "reset", "--hard"], check=True)
                     #subprocess.run(["git", "clean", "-fd"], check=True)  # remove untracked files (like .pyc)
                    
                     #subprocess.run(["git", "checkout", "main"], check=True)
