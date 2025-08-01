@@ -282,10 +282,10 @@ def main(env_config):
                 try:
                     subprocess.run(["git", "fetch", "origin"], check=True)
                     # Discard any local changes
-                    subprocess.run(["git", "reset", "--hard"], check=True)
-                    subprocess.run(["git", "clean", "-fd"], check=True)  # remove untracked files (like .pyc)
+                    #subprocess.run(["git", "reset", "--hard"], check=True)
+                    #subprocess.run(["git", "clean", "-fd"], check=True)  # remove untracked files (like .pyc)
                    
-                    subprocess.run(["git", "checkout", "main"], check=True)
+                    #subprocess.run(["git", "checkout", "main"], check=True)
                     subprocess.run(["git", "pull", "origin", "main"], check=True)
                     print("✅ Code updated to latest main branch.")
                 except subprocess.CalledProcessError as e:
